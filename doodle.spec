@@ -1,3 +1,4 @@
+#
 # Conditional build:
 %bcond_without  static_libs     # don't build static library
 
@@ -13,10 +14,11 @@ Source0:	http://gnunet.org/doodle/download/%{name}-%{version}.tar.gz
 URL:		http://gnunet.org/doodle/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
+BuildRequires:	fam-devel
 BuildRequires:	gettext-devel >= 0.14.5
-BuildRequires:	libtool
 BuildRequires:	libextractor-devel
-Requires:	doodle-libs = %{version}-%{release}
+BuildRequires:	libtool
+Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +48,6 @@ Ten pakiet zawiera pliki nag³ówkowe doodle'a.
 Summary:	Doodle library
 Summary(pl):	Biblioteka doodle'a
 Group:		Development/Libraries
-Requires:	libextractor
 
 %description libs
 A doodle library.
@@ -92,25 +93,26 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post libs  -p /sbin/ldconfig
-%postun libs -p /sbin/ldconfig
-
-%files devel
-%defattr(644,root,root,755)
-%{_libdir}/lib*.la
-%{_includedir}/*
-%{_mandir}/man3/*
-
-%files libs
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so*
-
-%files static
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.a
+%post	libs -p /sbin/ldconfig
+%postun	libs -p /sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/doodle*
 %{_mandir}/man1/doodle*
+
+%files devel
+%defattr(644,root,root,755)
+%{_libdir}/lib*.la
+%{_libdir}/lib*.so
+%{_includedir}/*
+%{_mandir}/man3/*
+
+%files libs
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
