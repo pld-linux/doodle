@@ -1,3 +1,5 @@
+# TODO:
+# - move doodled to separate package (maybe some initscript?)
 #
 # Conditional build:
 %bcond_without  static_libs     # don't build static library
@@ -6,7 +8,7 @@ Summary:	A tool to search the meta-data in your files via a database
 Summary(pl):	Narzêdzie do szybkiego przeszukiwania dokumentów w specjalnej bazie danych
 Name:		doodle
 Version:	0.6.3
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications
 Source0:	http://gnunet.org/doodle/download/%{name}-%{version}.tar.gz
@@ -14,6 +16,7 @@ Source0:	http://gnunet.org/doodle/download/%{name}-%{version}.tar.gz
 URL:		http://gnunet.org/doodle/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
+BuildRequires:	bzip2-devel
 BuildRequires:	fam-devel
 BuildRequires:	gettext-devel >= 0.14.5
 BuildRequires:	libextractor-devel
