@@ -3,7 +3,7 @@
 #
 # Conditional build:
 %bcond_without  static_libs     # don't build static library
-
+#
 Summary:	A tool to search the meta-data in your files via a database
 Summary(pl):	Narzêdzie do szybkiego przeszukiwania dokumentów w specjalnej bazie danych
 Name:		doodle
@@ -32,8 +32,8 @@ fast searches on the resulting database.
 %description -l pl
 Doodle to narzêdzie do szybkiego wyszukiwania dokumentów w komputerze.
 W tym celu buduje indeks, korzystaj±c z metadanych zawartych w
-dokumentach i umo¿liwia szybkie przeszukiwanie tak powsta³ej bazy 
-danych.
+dokumentach, po czym umo¿liwia szybkie przeszukiwanie tak powsta³ej
+bazy danych.
 
 %package devel
 Summary:	doodle - header files
@@ -50,7 +50,7 @@ Ten pakiet zawiera pliki nag³ówkowe doodle'a.
 %package libs
 Summary:	Doodle library
 Summary(pl):	Biblioteka doodle'a
-Group:		Development/Libraries
+Group:		Libraries
 
 %description libs
 A doodle library.
@@ -107,8 +107,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
-%{_libdir}/lib*.so
 %{_includedir}/*
 %{_mandir}/man3/*
 
