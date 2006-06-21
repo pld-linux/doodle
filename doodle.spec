@@ -7,12 +7,12 @@
 Summary:	A tool to search the meta-data in your files via a database
 Summary(pl):	Narzêdzie do szybkiego przeszukiwania dokumentów w specjalnej bazie danych
 Name:		doodle
-Version:	0.6.4
-Release:	0.2
+Version:	0.6.5
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://gnunet.org/doodle/download/%{name}-%{version}.tar.gz
-# Source0-md5:	fc07ab2d2c5621c3fa90abae784987ca
+# Source0-md5:	2ff179e8ec2af74937681ece8cc43b68
 URL:		http://gnunet.org/doodle/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
