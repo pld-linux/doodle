@@ -5,7 +5,7 @@
 %bcond_without  static_libs     # don't build static library
 #
 Summary:	A tool to search the meta-data in your files via a database
-Summary(pl.UTF-8):   Narzędzie do szybkiego przeszukiwania dokumentów w specjalnej bazie danych
+Summary(pl.UTF-8):	Narzędzie do szybkiego przeszukiwania dokumentów w specjalnej bazie danych
 Name:		doodle
 Version:	0.6.5
 Release:	1
@@ -37,7 +37,7 @@ bazy danych.
 
 %package devel
 Summary:	doodle - header files
-Summary(pl.UTF-8):   doodle - pliki nagłówkowe
+Summary(pl.UTF-8):	doodle - pliki nagłówkowe
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -49,7 +49,7 @@ Ten pakiet zawiera pliki nagłówkowe doodle'a.
 
 %package libs
 Summary:	Doodle library
-Summary(pl.UTF-8):   Biblioteka doodle'a
+Summary(pl.UTF-8):	Biblioteka doodle'a
 Group:		Libraries
 
 %description libs
@@ -60,7 +60,7 @@ Biblioteka doodle'a.
 
 %package static
 Summary:	Doodle - static library
-Summary(pl.UTF-8):   Biblioteka statyczna doodle'a
+Summary(pl.UTF-8):	Biblioteka statyczna doodle'a
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
