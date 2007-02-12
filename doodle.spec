@@ -5,7 +5,7 @@
 %bcond_without  static_libs     # don't build static library
 #
 Summary:	A tool to search the meta-data in your files via a database
-Summary(pl):	Narz阣zie do szybkiego przeszukiwania dokument體 w specjalnej bazie danych
+Summary(pl.UTF-8):   Narz臋dzie do szybkiego przeszukiwania dokument贸w w specjalnej bazie danych
 Name:		doodle
 Version:	0.6.5
 Release:	1
@@ -29,45 +29,45 @@ Doodle is a tool to quickly search the documents on a computer. Doodle
 builds an index using meta-data contained in the documents and allows
 fast searches on the resulting database.
 
-%description -l pl
-Doodle to narz阣zie do szybkiego wyszukiwania dokument體 w komputerze.
-W tym celu buduje indeks, korzystaj眂 z metadanych zawartych w
-dokumentach, po czym umo縧iwia szybkie przeszukiwanie tak powsta砮j
+%description -l pl.UTF-8
+Doodle to narz臋dzie do szybkiego wyszukiwania dokument贸w w komputerze.
+W tym celu buduje indeks, korzystaj膮c z metadanych zawartych w
+dokumentach, po czym umo偶liwia szybkie przeszukiwanie tak powsta艂ej
 bazy danych.
 
 %package devel
 Summary:	doodle - header files
-Summary(pl):	doodle - pliki nag丑wkowe
+Summary(pl.UTF-8):   doodle - pliki nag艂贸wkowe
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 This is the package containing the header files for doodle.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag丑wkowe doodle'a.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag艂贸wkowe doodle'a.
 
 %package libs
 Summary:	Doodle library
-Summary(pl):	Biblioteka doodle'a
+Summary(pl.UTF-8):   Biblioteka doodle'a
 Group:		Libraries
 
 %description libs
 A doodle library.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteka doodle'a.
 
 %package static
 Summary:	Doodle - static library
-Summary(pl):	Biblioteka statyczna doodle'a
+Summary(pl.UTF-8):   Biblioteka statyczna doodle'a
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static doodle library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna doodle'a.
 
 %prep
