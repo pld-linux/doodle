@@ -18,7 +18,7 @@ BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	fam-devel
-BuildRequires:	gettext-devel >= 0.14.5
+BuildRequires:	gettext-tools >= 0.14.5
 BuildRequires:	libextractor-devel
 BuildRequires:	libtool
 Requires:	%{name}-libs = %{version}-%{release}
